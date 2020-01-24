@@ -28,7 +28,7 @@ public class Trick {
     deck = new Deck();
     deck.shuffle(new SecureRandom());
     deck.shuffle(rng);
- 
+
 
   }
 
