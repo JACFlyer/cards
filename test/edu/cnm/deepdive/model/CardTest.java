@@ -52,7 +52,7 @@ class CardTest {
 
   @Test
   void testEquals() {
-    Card prev = null;
+     Card prev = null;
     for (Object[] testCase : cardData) {
     Card c1 = new Card((Suit) testCase[0], (Rank) testCase[1]);
     Card c2 = new Card((Suit) testCase[0], (Rank) testCase[1]);
