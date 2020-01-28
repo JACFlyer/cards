@@ -24,6 +24,9 @@ public class Trick {
     trick.report();
   }
 
+  /**
+   * Initiates a shuffle of the deck provided.
+   */
   private void prepare() {
     deck = new Deck();
     deck.shuffle(new SecureRandom());
@@ -32,6 +35,9 @@ public class Trick {
 
   }
 
+  /**
+   * Divides the deck by sorting red cards from black cards.
+   */
   private void split() {
     redPile = new LinkedList<>();
     blackPile = new LinkedList<>();
@@ -44,6 +50,9 @@ public class Trick {
     }
   }
 
+  /**
+   * Determines size of both the red and black pile and swaps the number of cards in the smaller stack.
+   */
   private void swap() {
     int swapSize = rng.nextInt(1 + Math.min(blackPile.size(), redPile.size()));
     for (int i = 0; i < swapSize; i++) {
@@ -52,6 +61,9 @@ public class Trick {
     }
   }
 
+  /**
+   * Counts the number of red and black cards in the remaining stacks.
+   */
   private void report() {
     int redCount = 0;
     int blackCount = 0;

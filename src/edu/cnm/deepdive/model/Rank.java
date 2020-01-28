@@ -1,5 +1,8 @@
 package edu.cnm.deepdive.model;
 
+/**
+ * Sets the possible rank for each card in the deck.
+ */
 public enum Rank {
   ACE,
   TWO,

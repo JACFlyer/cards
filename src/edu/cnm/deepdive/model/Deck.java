@@ -8,6 +8,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Creates an array of 52 cards, and initiates random shuffle.
+ */
 public class Deck {
 
   private List<Card> cards;
@@ -54,11 +57,4 @@ public int dealt() {
     return cards.toString();
   }
 
-  public static void main(String[] args) {
-    Deck deck = new Deck();
-    System.out.println(deck);
-    deck.shuffle(new SecureRandom());
-    System.out.println(deck);
-
-  }
 }
