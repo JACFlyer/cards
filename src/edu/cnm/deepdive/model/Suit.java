@@ -1,8 +1,8 @@
 package edu.cnm.deepdive.model;
 
 /**
- * Encapsulates the suits of standard playing cards.  The enum includes {@Link #symbol()}symbol and
- * {@Link #color() } color methods, to return the immutable Unicode symbol and {@Link Color} Color
+ * Encapsulates the suits of standard playing cards.  The enum includes {@link #symbol()}symbol and
+ * {@link #color() } color methods, to return the immutable Unicode symbol and {@link Color} Color
  * enum instance of any suit.
  */
 public enum Suit {
@@ -22,8 +22,8 @@ public enum Suit {
   }
 
   /**
-   * Returns {@Link Color} instance value for this suit.
-   * @return {@Link Color} value.
+   * Returns {@link Color} instance value for this suit.
+   * @return {@link Color} value.
    */
   public Color color() {
     return colors[ordinal()];

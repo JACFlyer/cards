@@ -35,7 +35,7 @@ public class Card {
   }
 
   /**
-   * Returns {@ Link Rank} of this card instance.
+   * Returns {@link Rank} of this card instance.
    */
   public Rank getRank() {
     return rank;
