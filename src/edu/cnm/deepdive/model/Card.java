@@ -8,7 +8,7 @@ import java.util.Objects;
  *
  * @author J. Asa Cade
  */
-public class Card {
+public class Card implements Comparable<Card> {
 
   private final Suit suit;
   private final Rank rank;
@@ -66,6 +66,15 @@ public class Card {
     return comparison;
   }
 
+  @Override
+  public int compareTo(Card other) {
+    int result = getSuit().compareTo(other.getSuit());
+    if (result == 0)
+    {
+      result = getRank().compareTo(other.getRank());
+    }
+    return result;
+      }
 }
 
 

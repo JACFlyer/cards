@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Random;
 
 /** Creates an array of 52 cards, and initiates random shuffle.*/
-public class Deck implements Comparator<Card> {
+public class Deck  {
 
   private List<Card> cards;
   private List<Card> dealt;
@@ -65,11 +65,7 @@ public int dealt() {
     if (gather) {
       gather();
     }
-    cards.sort(this);
+    cards.sort(null);
   }
 
-  @Override
-  public int compare(Card card1, Card card2) {
-    return Comparator.comparing(Card::getSuit).thenComparing(Card::getRank).compare(card1, card2);
-  }
 }
