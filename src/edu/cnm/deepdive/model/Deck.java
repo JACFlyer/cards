@@ -4,6 +4,7 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -64,13 +65,7 @@ public int dealt() {
     if (gather) {
       gather();
     }
-    cards.sort((car1, card2) -> {
-      int result = car1.getSuit().compareTo(card2.getSuit());
-      if (result == 0) {
-        result = car1.getRank().compareTo(card2.getRank());
-      }
-      return result;
-    });
+    cards.sort(Comparator.comparing(Card::getSuit).thenComparing(Card::getRank));
   }
 
 }
