@@ -8,9 +8,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Creates an array of 52 cards, and initiates random shuffle.
- */
+/** Creates an array of 52 cards, and initiates random shuffle.*/
 public class Deck {
 
   private List<Card> cards;
@@ -37,12 +35,16 @@ public Card deal()  {
 }
 
 public void shuffle(Random rng) {
-   cards.addAll(dealt);
-   dealt.clear();
+  gather();
   Collections.shuffle(cards, rng);
 }
 
-public int remaining() {
+  private void gather() {
+    cards.addAll(dealt);
+    dealt.clear();
+  }
+
+  public int remaining() {
     return cards.size();
 }
 
@@ -55,6 +57,20 @@ public int dealt() {
   @Override
   public String toString() {
     return cards.toString();
+  }
+
+
+  public void sort(boolean gather) {
+    if (gather) {
+      gather();
+    }
+    cards.sort((car1, card2) -> {
+      int result = car1.getSuit().compareTo(card2.getSuit());
+      if (result == 0) {
+        result = car1.getRank().compareTo(card2.getRank());
+      }
+      return result;
+    });
   }
 
 }
