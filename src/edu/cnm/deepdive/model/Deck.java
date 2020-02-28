@@ -60,12 +60,15 @@ public int dealt() {
     return cards.toString();
   }
 
-
+/**
+ * Boolean gather true
+ * Gather adds all cards to the list dealt and then clears the list
+ * If Gather is false then the cards list is sorted
+ * **/
   public void sort(boolean gather) {
     if (gather) {
       gather();
     }
     cards.sort(null);
   }
-
 }
